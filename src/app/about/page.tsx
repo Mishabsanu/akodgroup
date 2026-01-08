@@ -74,9 +74,9 @@ export default function AboutPage() {
             <section className="py-32 bg-brand-background text-center">
                 <div className="container mx-auto px-6">
                     <div className="mx-auto max-w-3xl border border-white/10 p-12 relative">
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-background px-4 text-brand-gold text-4xl font-serif">"</div>
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-background px-4 text-brand-gold text-4xl font-serif">&quot;</div>
                         <p className="font-serif text-2xl italic leading-relaxed text-gray-300 mb-8">
-                            We don't just construct buildings or write code; we engineer ecosystems where businesses and communities can thrive. Excellence is not an aspiration, it is our baseline.
+                            We don&apos;t just construct buildings or write code; we engineer ecosystems where businesses and communities can thrive. Excellence is not an aspiration, it is our baseline.
                         </p>
                         <div>
                             <h4 className="font-bold text-white uppercase tracking-widest text-sm">Mr. Chairman</h4>

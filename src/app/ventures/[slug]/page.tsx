@@ -46,7 +46,7 @@ export default function VenturePage({ params }: { params: { slug: string } }) {
                             transition={{ duration: 0.8, delay: 0.2 }}
                             className="text-2xl md:text-3xl font-light text-brand-platinum border-l-4 border-brand-appRed pl-6 italic"
                         >
-                            "{venture.tagline}"
+                            &quot;{venture.tagline}&quot;
                         </motion.p>
                     </div>
                 </div>
@@ -125,7 +125,7 @@ export default function VenturePage({ params }: { params: { slug: string } }) {
             {/* CTA Section - Minimal */}
             <section className="py-32 border-t border-white/10 bg-[#021830]">
                 <div className="container mx-auto px-6 text-center">
-                    <h2 className="font-serif text-4xl md:text-5xl mb-12 text-white">Let's build the future together.</h2>
+                    <h2 className="font-serif text-4xl md:text-5xl mb-12 text-white">Let&apos;s build the future together.</h2>
                     <Link
                         href="/contact"
                         className="inline-flex items-center gap-4 px-12 py-5 bg-white text-brand-appBlue font-bold tracking-[0.2em] uppercase hover:bg-brand-appRed hover:text-white transition-all duration-300 group"

@@ -9,7 +9,7 @@ const stats = [
 ];
 
 const AboutSection = () => {
-    return (
+  return (
     <section className="relative overflow-hidden bg-brand-appBlue py-32 text-white">
       {/* Red Accent Line */}
       <div className="absolute top-0 left-1/2 h-24 w-[1px] -translate-x-1/2 bg-gradient-to-b from-brand-appRed to-transparent opacity-80" />
@@ -43,7 +43,7 @@ const AboutSection = () => {
             transition={{ duration: 1, delay: 0.4 }}
             className="mx-auto mb-20 max-w-2xl text-lg font-light leading-relaxed text-gray-300 md:text-xl"
           >
-            Akod Group is the silent force behind the world's most ambitious
+            Akod Group is the silent force behind the world&apos;s most ambitious
             structures. From scaffolding that kisses the clouds to digital ecosystems that power economies.
           </motion.p>
         </div>

@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="mb-20 flex flex-col md:flex-row items-end justify-between border-b border-white/10 pb-12">
           <div className="max-w-2xl">
             <h2 className="font-serif text-4xl md:text-6xl mb-6 leading-tight">
-              Let's build the <br /><span className="text-brand-champagneGold italic">extraordinary.</span>
+              Let&apos;s build the <br /><span className="text-brand-champagneGold italic">extraordinary.</span>
             </h2>
             <Link href="/contact" className="inline-flex items-center gap-3 text-sm font-bold tracking-widest uppercase text-white hover:text-brand-champagneGold transition-colors group">
               Start a conversation

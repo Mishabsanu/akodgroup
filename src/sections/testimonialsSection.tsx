@@ -60,7 +60,7 @@ const TestimonialsSection = () => {
                 </div>
               </div>
 
-              <div className="mb-6 text-2xl text-brand-champagneGold font-serif">"</div>
+              <div className="mb-6 text-2xl text-brand-champagneGold font-serif">&quot;</div>
               <p className="mb-8 font-serif text-lg italic leading-relaxed text-brand-platinum/90">
                 {t.quote}
               </p>
