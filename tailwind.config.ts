@@ -14,21 +14,22 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          richBlack: "#020202", // Deepest Luxury Black
-          champagneGold: "#D4AF37", // Classic Gold
-          onyx: "#121212", // Secondary Dark
-          platinum: "#E5E4E2", // Soft Text
-          darkGray: "#1A1A1A",
+          // Final AKOD Palette (#0c2f55, #d60809, #c0cbd4, #ffffff)
+          richBlack: "#0c2f55", // Main Background Navy
+          champagneGold: "#d60809", // Accent Red (Replacing Gold)
+          onyx: "#0c2f55", // Using Main Navy to keep consistency, or subtle variations if opacity used
+          platinum: "#c0cbd4", // Secondary Text/Elements Grey
+          darkGray: "#0c2f55", // Neutral dark -> Navy
+
+          // Semantic Mappings
+          primary: "#0c2f55", // Navy
+          secondary: "#d60809", // Red
+          background: "#0c2f55", // Navy
+          surface: "#0c2f55", // Navy
           
-          // Mappings for existing classes to new theme
-          primary: "#D4AF37", 
-          secondary: "#020202",
-          background: "#020202",
-          surface: "#121212",
-          
-          // Legacy/Fallback mappings (mapped to luxury equivalents)
-          appBlue: "#020202", 
-          appRed: "#D4AF37", // Red becomes Gold
+          // Legacy mappings
+          appBlue: "#0c2f55", 
+          appRed: "#d60809", 
           white: "#ffffff",
         },
       },
@@ -36,6 +37,15 @@ const config: Config = {
         xs: "400px",
         "3xl": "1680px",
         "4xl": "2200px",
+      },
+      animation: {
+        "fade-in-up": "fadeInUp 0.8s ease-out forwards",
+      },
+      keyframes: {
+        fadeInUp: {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
     },
   },

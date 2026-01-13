@@ -17,21 +17,21 @@ const Header = () => {
   }, []);
 
   const navItemClass = (path: string) =>
-    `relative text-sm font-medium tracking-[0.2em] uppercase transition-colors duration-300 hover:text-brand-appRed ${pathname === path ? "text-brand-appRed" : "text-white"
+    `relative text-sm font-medium tracking-[0.2em] uppercase transition-colors duration-300 hover:text-brand-appRed ${(pathname === path) ? "text-brand-appRed" : (scrolled ? "text-brand-richBlack" : "text-white")
     } after:absolute after:-bottom-2 after:left-0 after:h-[1px] after:w-0 after:bg-brand-appRed after:transition-all after:duration-300 hover:after:w-full`;
 
   return (
     <>
       <header
         className={`fixed left-0 top-0 z-50 w-full transition-all duration-500 ${scrolled
-          ? "bg-brand-appBlue/90 backdrop-blur-md py-4 shadow-xl border-b border-white/5"
+          ? "bg-white/95 backdrop-blur-md py-4 shadow-sm border-b border-brand-richBlack/5"
           : "bg-transparent py-8"
           }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
           {/* Logo */}
           <Link href="/" className="relative z-50 flex items-center gap-2">
-            <div className="text-2xl font-bold tracking-widest text-white">
+            <div className={`text-2xl font-bold tracking-widest transition-colors ${scrolled ? "text-brand-richBlack" : "text-white"}`}>
               <span className="text-brand-appRed">AKOD</span>
               <span className="font-light">GROUP</span>
             </div>
@@ -48,7 +48,7 @@ const Header = () => {
 
             {/* Services Dropdown */}
             <div className="group relative">
-              <button className={`text-sm font-medium tracking-[0.2em] uppercase text-white hover:text-brand-appRed`}>
+              <button className={`text-sm font-medium tracking-[0.2em] uppercase transition-colors duration-300 hover:text-brand-appRed ${scrolled ? "text-brand-richBlack" : "text-white"}`}>
                 Expertise
               </button>
               <div className="absolute top-full -left-4 pt-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
@@ -68,16 +68,16 @@ const Header = () => {
 
             {/* Ventures Dropdown */}
             <div className="group relative">
-              <button className={`text-sm font-medium tracking-[0.2em] uppercase text-white hover:text-brand-appRed`}>
+              <button className={`text-sm font-medium tracking-[0.2em] uppercase transition-colors duration-300 hover:text-brand-appRed ${scrolled ? "text-brand-richBlack" : "text-white"}`}>
                 Ventures
               </button>
               <div className="absolute top-full -left-4 pt-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                <div className="w-64 bg-brand-appBlue border-t-2 border-brand-appRed p-6 shadow-2xl">
+                <div className="w-64 bg-white border-t-2 border-brand-appRed p-6 shadow-2xl">
                   <ul className="space-y-4">
-                    <li><Link href="/ventures/skode-safe" className="block text-sm text-gray-300 hover:text-white transition-colors">Skode Safe</Link></li>
-                    <li><Link href="/ventures/akod-scaffolding" className="block text-sm text-gray-300 hover:text-white transition-colors">Akod Scaffolding</Link></li>
-                    <li><Link href="/ventures/akod-tech" className="block text-sm text-gray-300 hover:text-white transition-colors">Akod Tech</Link></li>
-                    <li><Link href="/ventures/akod-heights" className="block text-sm text-gray-300 hover:text-white transition-colors">Akod Heights</Link></li>
+                    <li><Link href="/ventures/skode-safe" className="block text-sm text-brand-richBlack/70 hover:text-brand-appRed transition-colors">Skode Safe</Link></li>
+                    <li><Link href="/ventures/akod-scaffolding" className="block text-sm text-brand-richBlack/70 hover:text-brand-appRed transition-colors">Akod Scaffolding</Link></li>
+                    <li><Link href="/ventures/akod-tech" className="block text-sm text-brand-richBlack/70 hover:text-brand-appRed transition-colors">Akod Tech</Link></li>
+                    <li><Link href="/ventures/akod-heights" className="block text-sm text-brand-richBlack/70 hover:text-brand-appRed transition-colors">Akod Heights</Link></li>
                   </ul>
                 </div>
               </div>
@@ -91,9 +91,9 @@ const Header = () => {
           <div className="hidden items-center md:flex">
             <Link
               href="/contact"
-              className="group relative overflow-hidden rounded-full border border-white/20 bg-white/5 px-6 py-2 transition-all hover:bg-brand-appRed hover:border-brand-appRed"
+              className={`group relative overflow-hidden rounded-full border px-6 py-2 transition-all hover:bg-brand-appRed hover:border-brand-appRed ${scrolled ? "border-brand-richBlack/10 bg-brand-richBlack/5" : "border-white/20 bg-white/5"}`}
             >
-              <span className="relative z-10 text-xs font-bold tracking-widest text-white uppercase transition-colors group-hover:text-white">
+              <span className={`relative z-10 text-xs font-bold tracking-widest uppercase transition-colors group-hover:text-white ${scrolled ? "text-brand-richBlack" : "text-white"}`}>
                 Inquire
               </span>
             </Link>
@@ -101,13 +101,13 @@ const Header = () => {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="text-white md:hidden"
+            className={`md:hidden ${scrolled ? "text-brand-richBlack" : "text-white"}`}
             onClick={() => setShowMobileMenu(true)}
           >
             <span className="sr-only">Menu</span>
             <div className="space-y-2">
-              <div className="w-8 h-[2px] bg-white"></div>
-              <div className="w-8 h-[2px] bg-white"></div>
+              <div className={`w-8 h-[2px] ${scrolled ? "bg-brand-richBlack" : "bg-white"}`}></div>
+              <div className={`w-8 h-[2px] ${scrolled ? "bg-brand-richBlack" : "bg-white"}`}></div>
             </div>
           </button>
         </div>
